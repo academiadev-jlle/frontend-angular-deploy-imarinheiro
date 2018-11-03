@@ -8,28 +8,4 @@ import {PetListItemOptions} from './pet-list-item.options';
 } )
 export class AppComponent {
   title = 'Pet:CODE';
-  lostPets: PetListItemOptions[] = [
-    {
-      status: 'Perdido',
-      name: 'Nymeria',
-      description: 'Arya Stark'
-    },
-    {
-      status: 'Perdido',
-      name: 'Lady',
-      description: 'Sansa Stark'
-    }
-  ];
-  adoptionPets = [
-    {
-      status: 'Encontrado',
-      name: 'Ghost',
-      description: 'Jhon Stark'
-    },
-    {
-      status: 'Encontrado',
-      name: 'Shaggy Dog',
-      description: 'Rickon Stark'
-    }
-  ];
 }
