@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import {SharedModule} from './shared/shared.module';
 import {PrivateModule} from './private/private.module';
 import {PublicModule} from './public/public.module';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {PublicModule} from './public/public.module';
     BrowserModule,
     PrivateModule,
     SharedModule,
-    PublicModule
+    PublicModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
