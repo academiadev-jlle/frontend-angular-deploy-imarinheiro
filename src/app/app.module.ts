@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
-import {PetComponent} from './pet/pet.component';
+import {SharedModule} from './shared/shared.module';
+import {PrivateModule} from './private/private.module';
+import {PublicModule} from './public/public.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetComponent,
     CardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PrivateModule,
+    SharedModule,
+    PublicModule
   ],
   providers: [],
   bootstrap: [AppComponent]

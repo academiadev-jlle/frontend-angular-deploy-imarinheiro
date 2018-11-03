@@ -1,4 +1,4 @@
-export interface PetOptions{
+export interface PetListItemOptions{
   status: string;
   name: string;
   description: string;

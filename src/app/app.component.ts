@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {PetOptions} from './pet/pet.options';
+import {PetListItemOptions} from './pet-list-item.options';
 
 @Component ( {
   selector: 'app-root',
@@ -8,7 +8,7 @@ import {PetOptions} from './pet/pet.options';
 } )
 export class AppComponent {
   title = 'Pet:CODE';
-  lostPets: PetOptions[] = [
+  lostPets: PetListItemOptions[] = [
     {
       status: 'Perdido',
       name: 'Nymeria',

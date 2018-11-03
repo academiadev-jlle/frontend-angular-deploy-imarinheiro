@@ -1,38 +1,12 @@
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">PetCodes</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Perdidos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Encontrados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Adoção</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<app-header></app-header>
 
 <main role="main" class="main container">
   <h1 class="mt-5 mb-3">Pets que estão procurando seus donos</h1>
   <div class="row">
     <div *ngFor="let pet of lostPets" class="col-md-6">
-      <app-pet [status]="pet.status" [name]="pet.name" [description]="pet.description">
+      <app-pet-list-item [status]="pet.status" [name]="pet.name" [description]="pet.description">
         <strong class="d-inline-block mb-2 text-primary">{{ pet.status }}</strong>
-      </app-pet>
+      </app-pet-list-item>
     </div>
   </div>
 
@@ -45,9 +19,9 @@
 
   <div class="row">
     <div *ngFor="let pet of adoptionPets" class="col-md-6">
-      <app-pet [status]="pet.status" [name]="pet.name" [description]="pet.description">
+      <app-pet-list-item [status]="pet.status" [name]="pet.name" [description]="pet.description">
         <strong class="d-inline-block mb-2 text-info">{{ pet.status }}</strong>
-      </app-pet>
+      </app-pet-list-item>
     </div>
   </div>
 
@@ -56,8 +30,4 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <span class="text-muted">PetCodes 2018</span>
-  </div>
-</footer>
+<app-footer></app-footer>
