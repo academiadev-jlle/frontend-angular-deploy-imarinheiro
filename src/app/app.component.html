@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <main role="main" class="main container">
-  <h1 class="mt-5 mb-3">Pets que estão procurando seus donos</h1>
+  <h1 class="mt-5 mb-3 text-primary">Pets que estão procurando seus donos</h1>
   <div class="row">
     <div *ngFor="let pet of lostPets" class="col-md-6">
       <app-pet-list-item [status]="pet.status" [name]="pet.name" [description]="pet.description">
@@ -15,7 +15,7 @@
     <a href="#" class="btn btn-secondary my-2">Todos encontrados</a>
   </div>
 
-  <h1 class="mt-2 mb-3">Disponíveis para adoção</h1>
+  <h1 class="mt-2 mb-3 text-info">Disponíveis para adoção</h1>
 
   <div class="row">
     <div *ngFor="let pet of adoptionPets" class="col-md-6">
