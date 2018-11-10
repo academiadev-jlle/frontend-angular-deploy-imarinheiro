@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {PetListItemOptions} from './pet-list-item.options';
 
 @Component ( {
   selector: 'app-root',

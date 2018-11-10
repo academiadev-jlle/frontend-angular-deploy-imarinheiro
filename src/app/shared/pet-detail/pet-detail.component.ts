@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PetsService } from '../pets.service';
+import {PetListItemOptions} from '../pet-list-item/pet-list-item.options';
 
 @Component({
   selector: 'app-pet-detail',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PetDetailComponent implements OnInit {
 
-  constructor() { }
+  pet: PetListItemOptions;
+
+  constructor(private activatedRoute: ActivatedRoute, private petService: PetsService) { }
 
   ngOnInit() {
+    this.activatedRoute
+      .params
+      .subscribe((route) => {
+        this.pet = this.petService.getById(parseInt(route.id, 10));
+      });
   }
-
 }

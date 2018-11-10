@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PetListItemOptions} from '../../pet-list-item.options';
+import {PetListItemOptions} from 'src/app/shared/pet-list-item/pet-list-item.options';
+import { PetsService } from 'src/app/shared/pets.service';
 
 @Component({
   selector: 'app-home',
@@ -8,32 +9,13 @@ import {PetListItemOptions} from '../../pet-list-item.options';
 })
 export class HomeComponent implements OnInit {
 
-  lostPets: PetListItemOptions[] = [
-    {
-      status: 'Perdido',
-      name: 'Nymeria',
-      description: 'Arya Stark'
-    },
-    {
-      status: 'Perdido',
-      name: 'Lady',
-      description: 'Sansa Stark'
-    }
-  ];
-  adoptionPets = [
-    {
-      status: 'Encontrado',
-      name: 'Ghost',
-      description: 'Jhon Stark'
-    },
-    {
-      status: 'Encontrado',
-      name: 'Shaggy Dog',
-      description: 'Rickon Stark'
-    }
-  ];
+  lostPets: PetListItemOptions[] = [];
+  adoptionPets: PetListItemOptions[] = [];
 
-  constructor() { }
+  constructor(private petService: PetsService) {
+    this.lostPets = petService.getLost();
+    this.adoptionPets = petService.getAdoption();
+  }
 
   ngOnInit() {
   }
