@@ -4,4 +4,5 @@ export interface PetListItemOptions {
   description: string;
   isAdoption: boolean;
   isLost: boolean;
+  image: string;
 }
