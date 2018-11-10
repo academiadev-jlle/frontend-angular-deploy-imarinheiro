@@ -11,26 +11,38 @@ export class PetsService {
   constructor() {
     this.pets.push ( ...[{
       id: 1,
-      name: 'Fernando',
-      description: 'To perdido mae',
+      name: 'Nymeria',
+      description: 'A loba dos olhos amarelos, e recebeu esse nome como uma homenagem a rainha dos Rhoynar. Ela é idêntica a Arya, inteligente, brava e mal-humorada. Quando ela morde o braço de Joffrey, Arya acaba que espanta ela para que não fosse punida. Essa foi a ultima vez que vimos Nymeria.',
       isAdoption: false,
       isLost: true
     }, {
       id: 2,
-      name: 'Jair',
-      description: 'Mae sou presidente',
+      name: 'Ghost',
+      description: 'esse lobo é o mais lindo de todos, pelos brancos com olhos vermelhos. Jon Snow já gostou de cara porque ele era o único lobo diferente que tinha entre os filhotes, ele era albino. Pois assim como Snow, ele era estranho entre seus irmãos  e também por ser o mais rápidos a amadurecer. Ghost recebeu esse nome por nunca emitir nenhum som, nada, nem um mero ruído de seu rugido.',
       isAdoption: false,
       isLost: true
     }, {
       id: 3,
-      name: 'Rex',
-      description: 'Queria ter um nome melhor',
+      name: 'Gray Wind',
+      description: 'É um exímio guerreiro, dava medo em seus inimigos e tirou muitos Lannister desse mundo. Ele defendeu Robb durante vários momentos quando tentou ser o Rei no Norte, como morder os dedos do Lord Greatjon Umber quando saca sua espada sobre Robb.',
+      isAdoption: false,
+      isLost: true
+    }, {
+      id: 4,
+      name: 'Shaggy Dog',
+      description: 'Violento e rude como seu dono, cresceu como uma fera, já que não teve educação como seus irmãos teve. Algumas vezes, o lobo de Bran, Summer, teve que brigar com ShaggyDog para que ele obedecesse ordens, rebelde demais. ',
       isAdoption: true,
       isLost: false
     }, {
-      id: 4,
-      name: 'Totó',
-      description: 'Fui perdido em algum lugar',
+      id: 5,
+      name: 'Summer',
+      description: 'Verão e seus irmãos são encontrados na neve por Jon Snow e Robb Stark, próximos do corpo de sua mãe.[2] Bran tem dificuldade em escolher o nome para sua cria de lobo, pensando em diversos nomes sem nunca escolher um. Após a queda de Bran, Verão passou a uivar embaixo da janela do seu quarto, e mesmo que o enxotassem, ele voltava depois para continuar o uivo.',
+      isAdoption: true,
+      isLost: false
+    }, {
+      id: 6,
+      name: 'Lady',
+      description: 'Foi a acompanhante de Sansa  a caminho de Porto Real quando Ned se mudou para lá para a sua nomeação como a Mão do Rei.',
       isAdoption: true,
       isLost: false
     }] );
