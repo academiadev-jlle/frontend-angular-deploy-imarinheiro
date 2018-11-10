@@ -1,12 +1,17 @@
-<div class="card flex-md-row mb-4 shadow-sm h-md-250">
-  <div class="card-body d-flex flex-column align-items-start">
+<div class="card mb-4 shadow-sm">
+  <img class="card-img-top" [src]="photo" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+  <div class="card-body">
     <ng-content select="strong"></ng-content>
     <h3 class="mb-0">
-      <a class="text-dark" [routerLink]="['/pet', pet.id, pet.name]">{{ pet.name }}</a>
+      <a class="card-title text-dark" [routerLink]="['/pet', pet.id, pet.name]">{{ pet.name }}</a>
     </h3>
-    <p class="card-text mb-auto">{{ pet.description }}</p>
+    <p class="card-text">{{ pet.description | slice:0:150 }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <a [routerLink]="['/pet', pet.id, pet.name]" class="btn btn-sm btn-outline-secondary">Ver mais</a>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+      </div>
+      <small class="text-muted">9 mins atrás</small>
+    </div>
   </div>
-
-  <img class="card-img-right flex-auto d-none d-lg-block"
-       [src]="photo">
 </div>
