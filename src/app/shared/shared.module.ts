@@ -5,10 +5,12 @@ import {HeaderComponent} from './header/header.component';
 import {CommonModule} from '@angular/common';
 import {PetDetailComponent} from './pet-detail/pet-detail.component';
 import {RouterModule} from '@angular/router';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule ( {
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterModule
   ],
   declarations: [

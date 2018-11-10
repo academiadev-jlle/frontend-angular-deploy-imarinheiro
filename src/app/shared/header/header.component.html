@@ -7,10 +7,13 @@
       </button>
       <div class=" navbar-collapse" [ngClass]="{'collapse': isMenuCollapse}"  (click)="isMenuCollapse = !isMenuCollapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" href="#" routerLink="pet/lost">Todos os Animais</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" href="#">Animais</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" href="#">About</a>
           </li>
         </ul>
